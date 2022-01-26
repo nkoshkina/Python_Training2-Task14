@@ -20,7 +20,7 @@ def test_data_on_home_and_edit_pages(app):
 
 
 def clear_phones(s):
-    return re.sub("()/ -", "", s)
+    return re.sub("[()/ -]", "", s)
 
 def merge_phones_like_home_page(contact):
     return "\n".join(filter(lambda x: x!= "",
